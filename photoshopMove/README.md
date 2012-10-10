@@ -4,8 +4,8 @@ jquery.photoshopdMove.js
 This is a simple plugin that allows to move inside a div much like you can do it in Photoshop (tm)
 with the space + lmb shortcut.
 
-This is untested on anything other than Chrome 22 and have only been developed for my own needs
-so there are not that much options available.
+This is untested on anything other than Chrome 22 and has only been developed for my own needs
+so there are not that many options available.
 
 Usage
 -----
