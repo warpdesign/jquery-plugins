@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.photoshopMove.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		console.log('yop');
+		$('.main').photoshopMove({
+			startCB: function() { console.log('started'); },
+			endCB: function() { console.log('ended'); }
+		});
+	});
+	</script>
+	<style type="text/css">
+		html{
+			-webkit-user-select: none;
+		}
+		
+		.main{
+			width: 640px;
+			height: 480px;
+			overflow: auto;
+		} 
+	</style>
+</head>
+<body>
+	<div class="main">
+		<img src="http://bruixeta.b.r.pic.centerblog.net/cp5iidaw.jpg" alt="sunset" />
+	</div>
+</body>
+</html>

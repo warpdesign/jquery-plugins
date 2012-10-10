@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>WarpZoom sample test</title>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.zoom-0.8.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {	
+			$('ul').zoom({
+				divName:'#viewport',
+				drag:false,
+				startEvent: 'click',
+				kbControl:true,
+                grabCursor: 'url(img/openhand.cur), crosshair',
+	            grabbingCursor: 'url(img/closedhand.cur), move',
+				cursor: 'url(img/plus.cur), crosshair',
+                movingCursor: 'url(img/minus.cur), move',
+				loupe: 'img/loupe.gif',
+				loaderImg: 'img/loader.gif',
+				zoomTrack:false
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+	body{
+		text-align:center;
+	}
+
+	#viewport{
+		border:1px solid #999999;
+		width:500px;
+		height:400px;
+		overflow:hidden;
+		position:relative;
+		background-image: url(img/normal1.jpg);
+		background-repeat: no-repeat;
+		margin:auto;
+		cursor:crosshair;
+	}
+
+	ul{
+		clear:both;
+	}
+
+	li{
+		list-style-type:none;
+		display:inline;
+	}
+
+	a img{
+		border:4px solid #cccccc;
+	}
+
+	a{
+		border:none;
+	}
+
+	div.debugzoom{
+		border:1px solid #999999;
+		height:200px;
+		overflow:auto;
+		width:70%;
+		text-align:left;
+		background:url(img/loader.gif) no-repeat 50% 50%;
+	}
+
+  </style>
+	
+</head>
+
+<body>
+	
+	<div id="viewport" class="magnify"></div>
+	<ul>
+		<li><a class="zoom selected" href="img/normal1.jpg" rel="img/huge1.jpg"><img src="img/tiny1.jpg" alt="explosion" /></a></li>
+		<li><a class="zoom" href="img/normal2.jpg" rel="img/huge2.jpg"><img src="img/tiny2.jpg" alt="cat" /></a></li>
+		<li><a class="zoom" href="img/normal3.jpg" rel="img/huge3.jpg"><img src="img/tiny3.jpg" alt="grapefruit" /></a></li>
+	</ul>
+	<div id="debug" style="clear:left;"></div><br />
+</body>
+</html>
