@@ -25,8 +25,8 @@
  */
 (function($) {
 	$.fn.photoshopMove = function(options) {
-		(function(options, elements)  {
-			$(elements).each(function() {
+		return (function(options, elements)  {
+			return $(elements).each(function() {
 				var dragEnabled = false,
 					mouseDown = false,
 					keyDown = false;
