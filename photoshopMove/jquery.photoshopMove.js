@@ -25,8 +25,8 @@
  */
 (function($) {
 	$.fn.photoshopMove = function(options) {
-		return (function(options, elements)  {
-			return $(elements).each(function() {
+		(function(options, elements)  {
+			$(elements).each(function() {
 				var dragEnabled = false,
 					mouseDown = false,
 					keyDown = false;
@@ -48,6 +48,7 @@
 
 				function stopDrag() {
 					dragEnabled = false;
+					element.css('cursor', '');
 				};
 
 				$(this).bind('mousedown', function(event) {
@@ -99,8 +100,10 @@
 						if (!dragEnabled) {
 							clearTimeout(ts);
 							ts = null;
-							element.css('cursor', '');
 						}
+						
+						stopDrag();
+
 						if (options.endCB) {
 							options.endCB();
 						}
